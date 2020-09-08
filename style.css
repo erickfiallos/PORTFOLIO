@@ -1,0 +1,91 @@
+/* our comments goes in here*/
+
+/* generic selector*/
+
+body {
+	background-color: navajowhite;
+	color: black; /*text color*/
+	font-family:Century Gothic, monospace;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+	color: mediumorchid;
+	transition: color 200ms ease-in;
+}
+
+/* pseudo selector - user interacts */
+a:hover{
+	color: olivedrab;
+}
+
+img {
+	width: 100%;
+}
+
+/* id and class selector*/
+
+#container {
+	min-width: 300px;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+/*nested selector*/
+#header ul {
+	display: flex;
+}
+
+#header li {
+	margin-left: 1em;
+}
+
+#header a {
+	font-size: 1.3em;
+}
+
+#portfolio {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1em;
+}
+
+.project {
+	border: 2px solid olivedrab;
+	padding: 1em;
+	background-color: transparent;
+	transition: background-color 200ms ease-in;
+}
+
+.project:hover {
+	background-color: bisque;
+}
+
+.project a{
+	font-size: 1.25em;
+}
+
+/* about */
+
+#portrait {
+	width: 350px;
+	float: right;
+}
+
+#about p {
+	font-size: 2em;
+}
