@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw() {
-	background('turquoise');
+	background('black');
 
    // ears
     stroke(0)
