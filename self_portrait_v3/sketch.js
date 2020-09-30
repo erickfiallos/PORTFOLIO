@@ -4,7 +4,7 @@
 */
 
 // global scope
-var x = 345;
+var x;
 var y = 125;
 
 var eyeSize = 100;
@@ -14,7 +14,9 @@ var earSize = 100;
 
 function setup() {
 	createCanvas(640, 360);
+	x = width / 2;
 }
+
 
 function draw() {
 	background('black');
@@ -36,16 +38,21 @@ function draw() {
 	circle(x + 65, y, eyeSize); //right eye
 
 	fill("sienna");
-	circle(x - 65, y, irisSize); //left iris
-	circle(x + 65, y, irisSize); //right iris
+	var irisPosition = map(mouseY, 0, height, irisSize - 4, irisSize + 4);
+	var irisPosition = map(mouseX, 0, width, irisSize - 4, irisSize + 4);
+	circle(irisPosition + 215, irisPosition + 87, irisSize); //left iris
+	circle(irisPosition + 345, irisPosition + 87, irisSize); //right iris
 
 	fill(0);
-	circle(x - 65, y, pupilSize); //left pupil
-	circle(x + 65, y, pupilSize); //right pupil
+	var pupilPosition = map(mouseY, 0, height, pupilSize - 3.5, pupilSize + 3.5);
+	var pupilPosition = map(mouseX, 0, width, pupilSize - 3.5, pupilSize + 3.5);
+	circle(pupilPosition + 239, pupilPosition + 110, pupilSize); //left pupil
+	circle(pupilPosition + 369, pupilPosition + 110, pupilSize); //right pupil
 
     // mouth
     fill("peachpuff");
-	rect(x - 55, y + 105, 120, 50, 25);
+    var mouthHeight = map(mouseY, 0, height, 50, 80)
+	rect(x - 55, y + 105, 120, mouthHeight, 25);
     
     // nose
     fill("peru");
