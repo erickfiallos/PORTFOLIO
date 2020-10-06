@@ -3,7 +3,7 @@
     by erick fiallos
     text + images
 */
-var title = 'When you are in college but you remember how easy was high school';
+var title = 'When you are in college but you remember how easy high school was';
 var description = 'it used to be a beautiful place';
 
 var thanosImage;
