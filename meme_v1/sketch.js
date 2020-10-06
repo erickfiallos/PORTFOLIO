@@ -3,8 +3,14 @@
     by erick fiallos
     text + images
 */
-var title = 'MMP 210';
-var description = 'Draws text to the screen. Displays the information specified in the first parameter on the screen in the position specified by the additional parameters. A default font will be used unless a font is set with the textFont() function and a default size will be used unless a font is set with textSize().';
+var title = 'When you are in college but you remember how easy was high school';
+var description = 'it used to be a beautiful place';
+
+var thanosImage;
+
+function preload() {
+    thanosImage = loadImage('meme image.jpg');
+}
 
 function setup() {
 	var canvas = createCanvas (640, 360);
@@ -14,19 +20,26 @@ function setup() {
 function draw() {
 	background (220);
 
-    textSize(100);
-    fill('plum');
-    stroke(255);
+	/* images*/
+	image(thanosImage, 0, 0, thanosImage.width / 1.5, thanosImage.height / 1.5);
+    
+
+
+    /* text */
+    textSize(17);
+    fill('white');
+    stroke(20);
     strokeWeight(10);
     textFont('century gothic');
     textAlign(CENTER, BOTTOM);
-	text(title, width / 2, height / 2);
+	text(title, width / 2, height / 2 - 130);
 
     var titleWidth = textWidth(title);
 
-    textSize(14);
-    noStroke();
-    textAlign(LEFT);
-    text(description, width / 2 - titleWidth / 2, height / 2 + 40, titleWidth);
+    textSize(25);
+    fill('orange');
+    stroke(10);
+    textAlign(CENTER);
+    text(description, width / 2 - titleWidth / 2, height / 2 + 130, titleWidth);
 
 }
